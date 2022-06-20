@@ -17,19 +17,12 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-}
 const cucumber = require('cypress-cucumber-preprocessor').default
-
-module.exports =(on, getConfig) => {
-  on('file:preprocessor', cucumber())
-}
-/*
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
-
 module.exports = (on, config) => {
-    allureWriter(on, config);
-    return config;
-};*/
+  on('file:preprocessor', cucumber())
+  allureWriter(on, config);
+  return config;
+}
+// `on` is used to hook into various events Cypress emits
+// `config` is the resolved Cypress config
