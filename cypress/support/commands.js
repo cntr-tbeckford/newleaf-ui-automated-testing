@@ -11,7 +11,7 @@ export const testLastName = () => `Decoy${uuidLastName()}`
 //Generating a random email address
 const uuidEmail = () => Cypress._.random(0, 1e6)
 
-export const testEmail = () => `NewLeaf${uuidEmail()}@example.com`
+export const testEmail = () => `NewLeaf${uuidEmail()}@example.org`
 
 //Generating a random phone number
 const uuidPhone = () => Cypress._.random(1000000, 9999999)
