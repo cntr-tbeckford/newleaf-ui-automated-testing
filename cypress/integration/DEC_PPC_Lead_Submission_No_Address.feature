@@ -19,6 +19,6 @@ Feature: DEC Affiliate Request Information without Adress
       | nyiad.edu/prospective-students/landscape-design-course      |
       | nyiad.edu/prospective-students/personal-style-course        |
       | nyiad.edu/prospective-students/wedding-planning-course-new  |
-      | nyip.edu/prospective-students/learn-photography-new         |
+      #| nyip.edu/prospective-students/learn-photography-new         |
 
   

@@ -21,7 +21,7 @@ Feature: AWCO PPC Req Information
       | ashworthcollege.edu/online-electrician-course/                    |
       | ashworthcollege.edu/event-planning-course/                        |
       | ashworthcollege.edu/floral-design-program/                        |
-      | ashworthcollege.edu/graphic-design-courses/                       |
+      #| ashworthcollege.edu/graphic-design-courses/                       |
       | ashworthcollege.edu/hvac-training-online-school/                  |
       | ashworthcollege.edu/locksmith-training/                           |
       | ashworthcollege.edu/online-medical-billing-coding-training/       |
@@ -39,4 +39,4 @@ Feature: AWCO PPC Req Information
       | ashworthcollege.edu/veterinary-assistant-online-courses/          |
       | ashworthcollege.edu/veterinary-technician-degree-online/          |
       | ashworthcollege.edu/online-veterinary-technician-degree/          |
-      | ashworthcollege.edu/certified-wedding-planner                     |
+      #| ashworthcollege.edu/certified-wedding-planner                     |
