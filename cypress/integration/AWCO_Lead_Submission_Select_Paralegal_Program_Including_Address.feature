@@ -4,6 +4,7 @@ Scenario Outline: Submits a Lead through AWCO PPC Including Paralegal and Addres
     Given I visited each of the available "<sites>"
     When I fill the form including my address
     And I select the Program "LL"
+    And I Summit the Form
     Then I should see the Thank you Page
 
     Examples:

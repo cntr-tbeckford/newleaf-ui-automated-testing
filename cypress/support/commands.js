@@ -75,12 +75,16 @@ Cypress.Commands.add('fillAshworthAddress', () => {
     cy.get('#zip').click().type('18515').should('have.value', '18515');
 })
 
+Cypress.Commands.add('AddressError', () => {
+    cy.get('#address').should('addressformError parentFormundefined formError inline')
+})
+
 Cypress.Commands.add('selectProgram', (programValue) => {
     cy.get('#course').select(programValue).should('have.value', programValue);
 })
 
 Cypress.Commands.add('selectAge', (age) => {
-    cy.get('#age').select(age)//.should('have.value', age);
+    cy.get('#age').select(age)
 })
 
 Cypress.Commands.add('assertAshworthLeadIdMessage', () => {
