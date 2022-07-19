@@ -1,5 +1,5 @@
 import { Then } from "cypress-cucumber-preprocessor/steps";
 
-Then('I see an error', () => {
+Then('I should see an error', () => {
     cy.AddressError();
 })

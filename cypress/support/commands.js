@@ -76,7 +76,7 @@ Cypress.Commands.add('fillAshworthAddress', () => {
 })
 
 Cypress.Commands.add('AddressError', () => {
-    cy.get('#address').should('addressformError parentFormundefined formError inline')
+    cy.get('#address').should('have.class', 'validate[required] error');
 })
 
 Cypress.Commands.add('selectProgram', (programValue) => {

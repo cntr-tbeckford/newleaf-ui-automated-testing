@@ -4,7 +4,7 @@ Feature: DEC Affiliate Request Information without Address
     Given I visited each of the available "<sites>"
     When I fill the form
     And I send the form
-    Then I see an error
+    Then I should see an error
 
     Examples:
       | sites                                                       |
