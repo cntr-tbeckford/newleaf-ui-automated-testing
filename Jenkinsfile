@@ -11,9 +11,9 @@ pipeline {
         }
         stage('Run Tests') {
             steps{
-                sh 'cd ' + env.JENKINS_WORKSPACE + '/NewLeaf-UI-Tests'
-                sh 'npm install'
-                sh 'npx cypress run --env ENVIRONMENT=test,allure=true,allureResultsPath=results'
+                bat 'cd ' + env.JENKINS_WORKSPACE + '/NewLeaf-UI-Tests'
+                bat 'npm install'
+                bat 'npx cypress run --env ENVIRONMENT=test,allure=true,allureResultsPath=results'
             }
         }
     }
