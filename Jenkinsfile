@@ -6,7 +6,7 @@ pipeline {
         stage('Clone') {
             steps{
                 echo 'Cloning files from (branch: "' + env.BRANCH_NAME + '" )'
-                git branch: env.BRANCH_NAME, credentialsId: "pc1", url: "git@github.com:pennfoster/newleaf-ui-automated-testing.git"
+                git branch: env.BRANCH_NAME, credentialsId: "pc1", url: "https://github.com/pennfoster/newleaf-ui-automated-testing"
             }
         }
         stage('Run Tests') {
