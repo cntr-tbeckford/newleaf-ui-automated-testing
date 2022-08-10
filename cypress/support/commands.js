@@ -61,8 +61,10 @@ Cypress.Commands.add('sendForm', () => {
     cy.get('#submit').click();
 })
 
-Cypress.Commands.add('submitForm', () => {
-    cy.get('#doit').click();
+//Updated: Some buttons IDs are #doit but all buttons have type=submit
+Cypress.Commands.add('submitForm', () => 
+{
+    cy.get("[type='submit']").click();//changed fron #doit to submit type
 })
 
 Cypress.Commands.add('fillAshworthAddress', () => {
@@ -79,9 +81,9 @@ Cypress.Commands.add('AddressError', () => {
     cy.get('#address').should('have.class', 'validate[required] error');
 })
 
-Cypress.Commands.add('selectProgram', (programValue) => {
-    cy.get('#course').select(programValue).should('have.value', programValue);
-})
+ Cypress.Commands.add('selectProgram', (programValue) => {
+     cy.get('#course').select(programValue).should('have.value', programValue);
+ })
 
 Cypress.Commands.add('selectAge', (age) => {
     cy.get('#age').select(age)
