@@ -57,8 +57,22 @@ Cypress.Commands.add('fillForm', () => {
     cy.get('#email').click().type(random.testEmail).should('have.value', random.testEmail);
 })
 
+//Added: Complete Profile for enrollment
+Cypress.Commands.add('completeProfile', () => {
+    const random = getRandomData();
+
+    cy.get('#first-name').click().type(random.testFirstName).should('have.value', random.testFirstName);
+    cy.get('#last-name').click().type(random.testLastName).should('have.value', random.testLastName);
+    cy.get('#phone').click().type(random.testPhone).should('have.value', random.testPhone);
+    cy.get('#email').click().type(random.testEmail).should('have.value', random.testEmail);
+})
+
 Cypress.Commands.add('sendForm', () => {
     cy.get('#submit').click();
+})
+// Added: Click button NEXT
+Cypress.Commands.add('clickNext', () => {
+    cy.get('#btn-submit-program > .btn').click();
 })
 
 //Updated: Some buttons IDs are #doit but all buttons have type=submit
@@ -84,6 +98,11 @@ Cypress.Commands.add('AddressError', () => {
  Cypress.Commands.add('selectProgram', (programValue) => {
      cy.get('#course').select(programValue).should('have.value', programValue);
  })
+
+ //Function to select Program for enrollment
+ Cypress.Commands.add('selectEnrollmentProgram', (programValue) => {
+    cy.get('#program').select(programValue).should('have.value', programValue);
+})
 
 Cypress.Commands.add('selectAge', (age) => {
     cy.get('#age').select(age)
